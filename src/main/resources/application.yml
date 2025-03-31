@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: embedding-proxy-service
+  profiles:
+    active: "default"
+  config:
+    import: optional:${embedding-proxy-service-file:/etc/interactions/platform/embedding-proxy-service.properties},optional:${embedding-proxy-service-secret-props-file:/etc/interactions/platform/secret.yaml}
+  ai:
+    vertex:
+      ai:
+        embedding:
+          project-id: dev-poc-429118
+          location: us-central1
+          credentials-uri: classpath:vertex-ai-credentials.json
+          api-endpoint: us-central1-aiplatform.googleapis.com:443 # don't remove port number
+  main:
+    allow-bean-definition-overriding: true
+
+server:
+  max-http-request-header-size: 15KB
+  port: 8082
