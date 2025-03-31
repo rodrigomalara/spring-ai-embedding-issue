@@ -1,6 +1,6 @@
-# Spring AI VertexAiTextEmbeddingModel embedding issue
+## Spring AI VertexAiTextEmbeddingModel embedding issue
 
-# How to reproduce the issue
+### How to reproduce the issue
 
 Create a Google Cloud account and a service account that can use the Vertex AI API.
 
